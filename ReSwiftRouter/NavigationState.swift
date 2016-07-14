@@ -12,7 +12,7 @@ public typealias RouteElementIdentifier = String
 public typealias Route = [RouteElementIdentifier]
 
 public struct RouteHash: Hashable {
-    let route: Route
+    public let route: Route
     let routeHash: String
 
     init(route: Route) {
