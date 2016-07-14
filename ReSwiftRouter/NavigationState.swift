@@ -12,9 +12,11 @@ public typealias RouteElementIdentifier = String
 public typealias Route = [RouteElementIdentifier]
 
 public struct RouteHash: Hashable {
+    let route: Route
     let routeHash: String
 
     init(route: Route) {
+        self.route = route
         self.routeHash = route.joinWithSeparator("/")
     }
 
