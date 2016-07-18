@@ -15,8 +15,10 @@ public typealias Route = [RouteElementIdentifier]
 /// Can be used to check two routes for equality.
 public struct RouteHash: Hashable {
     let routeHash: String
+    public let route: Route
 
     public init(route: Route) {
+        self.route = route
         self.routeHash = route.joinWithSeparator("/")
     }
 
